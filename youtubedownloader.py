@@ -6,7 +6,8 @@ def download_youtube_video(url,output_path="Downloads"):
             os.makedirs(output_path)
         
         ydl_opts ={
-            'format':'best',
+            'format': 'bestvideo+bestaudio/best',
+
             'outtmpl':f'{output_path}/%(title)s.%(ext)s',
             'noplaylist': True,
         }
